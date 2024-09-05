@@ -1,11 +1,12 @@
 name: AwsDeploy
 
 on:
-  release:
+  push:
     branches:
       - 'main'
       - 'releases/**'
-    type: [created]
+  release:
+      type: [created]
 
 jobs:
   build:
