@@ -54,7 +54,7 @@ jobs:
           username: $({ secrets.SSH_USERNAME })
           port: $({ secrets.SSH_PORT })
           key: $({ secrets.SSH_KEY })
-          scripts_stop: true
+          script_stop: true
           script: /
             cd htdocs/deballesenbals.ovh
             git checkout master
