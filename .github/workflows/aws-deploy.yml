@@ -47,7 +47,7 @@ jobs:
         run: npm run build
 
       - name: Deploy PHP to server
-        if: ${{ succeess() }}
+        if: ${{ success() }}
         uses: appleboy/ssh-actions@master
         with:
           host: $({ secrets.SSH_HOST })
