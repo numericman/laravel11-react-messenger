@@ -48,7 +48,7 @@ jobs:
 
       - name: Deploy PHP to server
         if: ${{ success() }}
-        uses: appleboy/ssh-actions@master
+        uses: appleboy/ssh-action@master
         with:
           host: $({ secrets.SSH_HOST })
           username: $({ secrets.SSH_USERNAME })
