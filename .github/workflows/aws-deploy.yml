@@ -16,12 +16,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: setup PHP
-        use: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
 
       - name: setup Node.js
-        use: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 20
 
@@ -48,7 +48,7 @@ jobs:
 
       - name: Deploy PHP to server
         if: ${{ succeess() }}
-        use: appleboy/ssh-actions@master
+        uses: appleboy/ssh-actions@master
         with:
           host: $({ secrets.SSH_HOST })
           username: $({ secrets.SSH_USERNAME })
