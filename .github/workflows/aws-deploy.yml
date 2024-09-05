@@ -52,7 +52,7 @@ jobs:
         with:
           host: $({ secrets.SSH_HOST })
           username: $({ secrets.SSH_USERNAME })
-          port: $({ secrets.SSH_PORT })
+          port: 22
           key: $({ secrets.SSH_KEY })
           script_stop: true
           script: /
